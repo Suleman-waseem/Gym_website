@@ -1,0 +1,253 @@
+/* PRICING CARD */
+.pricing-card {
+  background-color: var(--color-bg-lightest);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(0, 255, 102, 0.3);
+}
+
+.pricing-card.recommended {
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+  background: linear-gradient(to bottom, var(--color-bg-lightest), #112211);
+}
+
+.pricing-card.recommended:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pricing-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-price {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.amount {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.period {
+  color: var(--color-text-muted);
+  align-self: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-features {
+  text-align: left;
+  margin-bottom: 3rem;
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* TRAINER CARD */
+.trainer-card {
+  background-color: var(--color-bg-lightest);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform var(--transition-normal);
+}
+
+.trainer-card:hover {
+  transform: translateY(-10px);
+}
+
+.trainer-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+}
+
+.trainer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.trainer-card:hover .trainer-img {
+  transform: scale(1.1);
+}
+
+.trainer-socials {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(10,10,10,0.9), transparent);
+  transition: bottom var(--transition-normal);
+}
+
+.trainer-card:hover .trainer-socials {
+  bottom: 0;
+}
+
+.trainer-socials a {
+  color: var(--color-text-main);
+  background-color: var(--color-primary);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-bg-dark);
+  transition: transform var(--transition-fast);
+}
+
+.trainer-socials a:hover {
+  transform: scale(1.1);
+}
+
+.trainer-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.trainer-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* PROGRAM CARD */
+.program-card {
+  background-color: var(--color-bg-lightest);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform var(--transition-normal);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 255, 102, 0.2);
+}
+
+.program-img-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.program-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.program-card:hover .program-img {
+  transform: scale(1.1);
+}
+
+.program-content {
+  padding: 1.5rem;
+}
+
+.program-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.program-desc {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.program-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.program-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.program-meta span svg {
+  color: var(--color-primary);
+}
+
+.program-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.program-link:hover {
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-card.recommended {
+    transform: none;
+  }
+  
+  .pricing-card.recommended:hover {
+    transform: translateY(-10px);
+  }
+}
